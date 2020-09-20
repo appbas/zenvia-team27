@@ -7,6 +7,6 @@ app.use(Router.json());
 app.get('/', SpeechToTextService.get);
 app.post('/speech-to-text', SpeechToTextService.post);
 
-app.listen(port, '127.0.0.1', () => {
+app.listen(port, () => {
   console.log(`started`);
 });
