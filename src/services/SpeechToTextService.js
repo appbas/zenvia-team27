@@ -1,27 +1,44 @@
 const speech = require("@google-cloud/speech");
 const textToSpeech = require('@google-cloud/text-to-speech');
+const http = require('http');
+const fs = require('fs');
+const { v4: uuidv4 } = require('uuid');
+
+const download = function(url) {
+
+  const fileName = uuidv4().concat('.ogg');
+
+  return new Promise(
+    function(resolve, reject) {
+        var file = fs.createWriteStream(fileName);
+          http.get(url, function(response) {
+            response.pipe(file).on('finish', function() {
+              file.close();
+              resolve(fileName);
+            });
+          }).on('error', function(err) { // Handle errors
+            fs.unlink(fileName); // Delete the file async. (But we don't check the result)
+            reject(err);
+          });
+    }
+  );
+
+};
 
 class SpeechToText {
   async post(req, res) {
     try {
       const client = new speech.SpeechClient();
 
-      // console.log(req.body);
-      const { bytes } = req.body;
-      // const file = fs.readFileSync(audioFile);
-      // const file = fs.readlinkSync(audioFile);
-      // const audioBytes = file.toString('base64');
+      const { audioFile } = req.body;
+      const fileLocal = await download( audioFile );
+      const file = fs.readFileSync(fileLocal);
+      const audioBytes = file.toString('base64');
 
-      // console.log(audioBytes);
-
-      if (!bytes || bytes.trim().length == 0) {
-        return res.status(400).json({
-          result: "Nenhum bytes informado",
-        });
-      }
-
+      fs.unlinkSync(fileLocal);
+      
       const audio = {
-        content: bytes,
+        content: audioBytes,
       };
 
       const config = {
@@ -42,10 +59,16 @@ class SpeechToText {
         .map((result) => result.alternatives[0].transcript)
         .join("\n");
 
+      
+
+
       return res.json({
         transcription,
       });
+
+
     } catch (error) {
+      console.log(error);
       return res.status(500).json({
         error: "Erro de interno.",
       });
@@ -98,6 +121,7 @@ class SpeechToText {
       result: "Iniciado",
     });
   }
+
 }
 
 module.exports = new SpeechToText();
