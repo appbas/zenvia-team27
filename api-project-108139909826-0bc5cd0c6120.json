@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "api-project-108139909826",
+  "private_key_id": "0bc5cd0c612071617b5e88f376e303430e6d8838",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDEUSUIWXWA+/xP\nzwlLuq5vIPyHCYH7trdFytYWxUaHNkxsN5Q7cLQuB0k9xguUUARb0cEkH9l88wVT\n+Ka2O8sea2KWcG0U9Mbj4GqlHMpTKTVMeEFUG2WFFS7APx/HtY41ZVZIcvsZbSWe\njCGthOAyonoc9N0sFILvDK+CIStGwzuqOH72DObWThw4jT5nFcwacu+CPdy5/I2b\n48h0fydzjDwDUsN5dKdTaRLGtLN2neBmIXRQWKv8T4feYYVejhGT31xn0Xrds0R4\nKw2wJ+Z6qlQfXM3CEhgXHo8ucsGKHDHdHo3c2VaPpns7KPupdKjWFgSz6GF/xe8F\nTFYVDm5jAgMBAAECggEAHi5pdpimR3+2ASEPyUw4gA4+tJYCHUwwbfLqqhKHLsdq\nxWJgEClaEg99s5kMc68/lEwxmNeqrJqCEbBTFQYpSpJw1DcRlhyxrRv12U+NTW6y\n6oA8bu1NVMH2b4jk3mOrqsrbEoVW1Ehi9baOgOpCO5aeFnCQxjObE5xMKUHnMNgT\nGDSoKZBoz/qdaZnApxqzTU4Yk6vITlEqPLXVNoJLgbyKUV8D8X9k7ZF2xiz4vmg0\nOa/AYFs2UNBiqsDKJsRhy7RwY0Qru2fb/y2idWSgGtxObWrd4/yyWS5yhOikp6xG\nQIIMOW/wjPKHlZYaU3ZYEraWhj1fsnv7gvCxXF3YPQKBgQDg8JrpFT2Z96E3H3Zs\nqmjl8tPoC+zsCLtPOhpXEiJQo7f0ZSKOgqdCNKe7v76FN8eEy1tsSUCAW2nknCO1\n9Kkj5Sqvi4TP+5Xnkdey/0vp34rXvIRIsYu20E+lwSh3mOxasEz01ZQir+UrytkF\nz+zDMV7ssYSX3QnUeYICfpTH3QKBgQDfbL/dS38xAzoUAjr0ukpum/SBVp+AupFU\nL3OXNVOT0oizp9xAFG6wHQE7mHSM2xlRVGs/El+WomQYPAR95x4YYPAnRZomVvBr\nFtbTSj8NoTkkDIbZoGv/bs5PRDn5pPBSb4UwgyTIOPYOjlcNLDrozibe+O2G5FwJ\nF7U65vnLPwKBgBreImK82sLNRUBkTazlHep5er44zm/TCyyHcCX+UIL5Szux6NLE\n4F2UFITkfklDRF2kPKNOjJnIUXmw/ML7GkjjUpntPEvrbRhf3zfOLq8cuGTUa6iT\nLHEFqL3PuJmwdmrOrCKCcFNEV0dHz2xWTZ1zBDeZbJEHIelzKghKPlMxAoGBAJUy\nld09MS6VrQ73fk82p8W9N0W3hsP70liZZ2MuJSWtjcQK8DWKb3ADrnMRl6MIHJwG\n96ciqdp5jsXwLj+1Oo+lDDntbMb1f47DraljB0AezX2ZL+PcEMJ+SB7+vIhM8H7c\nIeEHcmSSRR3rR45wXtZf8+0p5dQSYrNftZIj8+MZAoGALvy44lQAxvMVlUnVyW+1\nYrpAxC6OHECXhe8wo2vC5qIm+/6jjUfqJLpidX4xowx+xBiR/7leCSUPzneQWdrm\nNFlXdyZRNQjCZcZuTcYBUCgs7EYom7gSLQ9bWwbqvRLe08Y76xpR6Ctwj3q9RoD2\nfqqZL6MyW5yU05kU7eDNowk=\n-----END PRIVATE KEY-----\n",
+  "client_email": "zenvia-hack@api-project-108139909826.iam.gserviceaccount.com",
+  "client_id": "105358143776897873896",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/zenvia-hack%40api-project-108139909826.iam.gserviceaccount.com"
+}

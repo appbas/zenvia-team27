@@ -394,3 +394,5 @@ dist
 .vercel
 
 test
+
+text-audio.js
