@@ -52,6 +52,12 @@ class SpeechToText {
     }
 
   }
+
+  async get(req, res) {
+    return res.json({
+      result: 'Iniciado',
+    });
+  }
 }
 
 module.exports = new SpeechToText();
