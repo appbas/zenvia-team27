@@ -43,7 +43,7 @@ class SpeechToText {
 
       const config = {
         encoding: "OGG_OPUS",
-        sampleRateHertz: 16000,
+        sampleRateHertz: 48000,
         languageCode: "pt-BR",
         enableWordTimeOffsets: false,
       };
@@ -59,7 +59,7 @@ class SpeechToText {
         .map((result) => result.alternatives[0].transcript)
         .join("\n");
 
-      
+      console.log(`Transcription: ${transcription}`);
 
 
       return res.json({
@@ -83,6 +83,8 @@ class SpeechToText {
         result: "Texto inválido",
       });
     }
+
+    console.log(`Texto recebido: ${text}`);
 
     const client = new textToSpeech.TextToSpeechClient();
 
