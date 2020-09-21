@@ -1,6 +1,7 @@
 const speech = require("@google-cloud/speech");
 const textToSpeech = require('@google-cloud/text-to-speech');
 const http = require('http');
+const https = require('https');
 const fs = require('fs');
 const { v4: uuidv4 } = require('uuid');
 
@@ -8,10 +9,12 @@ const download = function(url) {
 
   const fileName = uuidv4().concat('.ogg');
 
+  const httpOrS = String(url).includes('https') ? https : http;
+
   return new Promise(
     function(resolve, reject) {
         var file = fs.createWriteStream(fileName);
-          http.get(url, function(response) {
+        httpOrS.get(url, function(response) {
             response.pipe(file).on('finish', function() {
               file.close();
               resolve(fileName);
@@ -43,8 +46,10 @@ class SpeechToText {
 
       const config = {
         encoding: "OGG_OPUS",
-        sampleRateHertz: 48000,
         languageCode: "pt-BR",
+        model: "default",
+        enableAutomaticPunctuation: true,
+        sampleRateHertz: 48000,
         enableWordTimeOffsets: false,
       };
 
